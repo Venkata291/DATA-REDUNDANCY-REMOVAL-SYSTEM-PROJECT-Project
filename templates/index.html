@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Data Redundancy Removal System</title>
+
+<style>
+
+body{
+background:black;
+color:white;
+font-family:Arial;
+padding:20px;
+}
+
+h1{
+color:lime;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+}
+
+th,td{
+border:1px solid white;
+padding:10px;
+text-align:center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>CLOUD DATABASE - UNIQUE VERIFIED RECORDS</h1>
+
+<table>
+
+<tr>
+<th>ID</th>
+<th>NAME</th>
+<th>EMAIL</th>
+</tr>
+
+{% for emp in employees %}
+
+<tr>
+<td>{{ emp[0] }}</td>
+<td>{{ emp[1] }}</td>
+<td>{{ emp[2] }}</td>
+</tr>
+
+{% endfor %}
+
+</table>
+
+<br>
+
+<h2>Total Unique Records : {{ count }}</h2>
+
+</body>
+</html>
